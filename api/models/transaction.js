@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 
 const transactionSchema = mongoose.Schema({
     _id : mongoose.Types.ObjectId,
+    email:{
+        type : String,
+        require : true
+    },
     sender:{
         type : String,
         require : true
@@ -25,6 +29,10 @@ const transactionSchema = mongoose.Schema({
     Hash:{
         type : String,
         require : true
+    },
+    status : {
+        type : Boolean,
+        default : false
     }},
     {
         timestamps:true
